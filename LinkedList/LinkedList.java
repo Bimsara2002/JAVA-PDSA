@@ -39,4 +39,16 @@ public class LinkedList {
         }
         size++; //increment the size of the list
     }
+    public Object removeFirst(){
+        Object removedData = null; //initialize a variable to store the removed data
+        if(isEmpty()){
+            System.out.println("List is empty. Cannot remove element."); //if the list is empty, print a message
+        }
+        else{
+            removedData = head.data; //store the data of the first node
+            head = head.next; //assign the next node to head, effectively removing the first node
+            size--; //decrement the size of the list
+        }
+        return removedData; //return the removed data
+    }
 }
