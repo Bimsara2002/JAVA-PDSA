@@ -51,4 +51,26 @@ public class LinkedList {
         }
         return removedData; //return the removed data
     }
+
+    public Object removeLast(){
+        Object removedData = null;
+        if(isEmpty()){
+            System.out.println("List is empty. Cannot remove element.");
+        }
+        else if(size == 1){
+            removedData = head.data; //store the data of the only node
+            head = null; //set head to null, effectively removing the only node
+            size--;
+        }
+        else{
+            ChainNode current = head; //start from the head
+            while(current.next.next != null){ //traverse the list until the second last node
+                current = current.next; //move to the next node
+            }
+            removedData = current.next.data; //store the data of the last node
+            current.next = null; //set the next of the second last node to null, effectively removing the last node
+            size--;
+        }
+        return removedData;
+    }
 }
