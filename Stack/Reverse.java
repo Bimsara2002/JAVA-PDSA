@@ -3,7 +3,7 @@ public class Reverse {
     int top;
     int capacity;
 
-    Reverse(int size){
+    Reverse(int size){ 
         arr = new char[size];
         capacity = size;
         top = -1;
@@ -16,7 +16,7 @@ public class Reverse {
     boolean isEmpty(){
         return top == -1; 
     }
-    public void push(char x){
+    public void push(char x){ // add an item to the stack
         if(isFull()){
             System.out.println("Stack Overflow");
         }
@@ -26,7 +26,7 @@ public class Reverse {
             System.out.println(x +" Pushed to Stack");
         }
     }
-    public void pop(){
+    public void pop(){ // remove an item from the stack
         if(isEmpty()){
             System.out.println("Stack underflow");
         }

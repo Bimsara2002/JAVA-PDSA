@@ -23,7 +23,7 @@ public class Queue {
         return front>rear;
     }
 
-    void enQueue (int x){
+    void enQueue (int x){ // add an item to the queue
         if(isFull()){
             System.out.println("Queue is full");
         }
@@ -33,7 +33,7 @@ public class Queue {
             System.out.println(x + " enqueued to the queue");
         }
     }
-    void deQueue (){
+    void deQueue (){ // remove an item from the queue
         if(isEmpty()){
             System.out.println("Queue is Empty");
         }
