@@ -2,7 +2,7 @@ package Queue;
 
 public class Queue {
     int front;
-    int rear;
+    int rear; 
     int capacity;
     int noItem;
 
@@ -11,7 +11,7 @@ public class Queue {
     public Queue(int size) {
         this.capacity = size;
         front = 0;
-        rear = -1;
+        rear = -1; 
         noItem = 0;
         queueArr = new int[this.capacity];
 
